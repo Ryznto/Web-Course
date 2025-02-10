@@ -1,5 +1,3 @@
-import { Routes, Route } from "react-router";
-
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
 
@@ -14,8 +12,8 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 function App() {
   return (
     <>
-      <NavbarComponent />
       <Router>
+        <NavbarComponent />
         <Routes>
           <Route path="/" Component={HomePage} />
           <Route path="/kelas" Component={KelasPage} />
@@ -25,7 +23,6 @@ function App() {
         </Routes>
       </Router>
       <FooterComponent />
-          
     </>
   );
 }
