@@ -7,23 +7,22 @@ import TestimonialPage from "./pages/TestimonialPage";
 import FaqPage from "./pages/FaqPage";
 import SyaratKetentuanPage from "./pages/SyaratKetentuanPage";
 
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Router>
-        <NavbarComponent />
-        <Routes>
-          <Route path="/" Component={HomePage} />
-          <Route path="/kelas" Component={KelasPage} />
-          <Route path="/testimonial" Component={TestimonialPage} />
-          <Route path="/faq" Component={FaqPage} />
-          <Route path="/syaratketentuan" Component={SyaratKetentuanPage} />
-        </Routes>
-      </Router>
+   <>
+      <NavbarComponent />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/kelas" element={<KelasPage />} />
+        <Route path="/testimonial" element={<TestimonialPage />} />
+        <Route path="/faq" element={<FaqPage />} />
+        <Route path="/syaratketentuan" element={<SyaratKetentuanPage />} />
+      </Routes>
       <FooterComponent />
-    </>
+      </>
   );
 }
+
 export default App;
